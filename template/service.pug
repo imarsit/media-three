@@ -1,0 +1,119 @@
+extends layout
+
+block vars
+    - let title = '火星人科技'
+
+block content
+    #wrapper.home-page
+        include lib/head
+        #a1portalSkin_headerAreaA.header
+            a#33428(name='33428')
+            .module-default
+                .module-inner
+                    #a1portalSkin_ctr185336185336_mainArea.module-content
+                        .slideshow.slideshow-min.carousel.clearfix(style='height:400px; overflow:hidden;')
+                            #carousel-185336
+                                .carousel-item
+                                    .carousel-img
+                                        a(href='javascript:;')
+                                            img(src='/public/images/files/2016062910580815971.jpg' border='0')
+                            #carousel-page-185336.carousel-btn.carousel-btn-fixed
+
+        section.main
+            .page-width.clearfix
+                section.content.float-right
+                    section.page-title.page-title-inner.clearfix
+                        .breadcrumbs.float-right(skinobjectzone='HtmlBreadCrumb_3835')
+                            span 当前位置：
+                            a.breadcrumbs-home(href='/') 首页
+                            i >
+                            a(href='service') 服务范围
+                            i >
+                            strong 建筑表现
+                        .page-name.float-left
+                            h2 建筑表现
+                    #a1portalSkin_mainArea.content-wrapper
+                        a#33383(name='33383')
+                        .module
+                            .module-inner
+                                #a1portalSkin_ctr185328185328_mainArea.module-content
+                                    .qhd-content
+                                        p
+                                            img(src='/public/images/a/dfaef963-e7ff-4441-8f85-7e69cfc6e2b7.jpg' style='width: 1000px; height: 430px;')
+                                        p 通过图片等传媒来表达作品所需要以及预期的达到的效果，从现代来讲是通过计算机三维仿真软件技术来模拟真实环境的高仿真虚拟图片，在建筑、工业等细分行业来看，效果图的主要功能是将平面的图纸三维化，仿真化，通过高仿真的制作，来检查设计方案的细微瑕疵。
+                        a#33384(name='33384')
+                        .module-default
+                            .module-inner
+                                #a1portalSkin_ctr185329185329_mainArea.module-content
+                                    .accordion
+                                        .accordion-handle
+                                            h4 方案多媒体动画
+                                            i
+                                        #a1portalSkin_ctr185329185329_TabList_QHDSPM185329M1598.accordion-pane
+                                            a#33385(name='33385')
+                                            .module-default
+                                                .module-inner
+                                                    #a1portalSkin_ctr185329185329_TabList_ctr185330185330_mainArea.module-content
+                                                        .qhd-content
+                                                            p 多媒体动画方案演示作为一 种新兴的设计方案展示，它采用采用三维动画及多媒体技术，将声音、文字、图片、视频及项目的三维动画演示等有机的整合到一起，使设计理念、方案设计、交通 分析、景观节点分析等内容生动逼真地表现出来，为方案表现手法的多样性开启了的新的思路。摆脱了简单的图片、表格、PPT展示，进而使用更人性化的，直观 的人机交互方式，在美妙的音乐衬托下，加上专业的配音解说，将我们的设计方案、工程组织方案生动直观的展示出来，在技术标评审和答辩中，多媒体三维动画技 术将显示出独特的优势，其演示效果必将受到甲方与到场评审专家的一致好评，为成功竞标增添了重要砝码。
+                                        .accordion-handle
+                                            h4 建筑效果图
+                                            i
+                                        #a1portalSkin_ctr185329185329_TabList_QHDSPM185329M1598.accordion-pane
+                        a#33385(name='33385')
+                        .module-default
+                            .module-inner
+                                #a1portalSkin_ctr185329185329_TabList_ctr185330185330_mainArea.module-content
+                                    .qhd-content
+                                        p 建筑效果图就是把环境景观建筑用写实的手法通过图形的方式进行传递。在建筑、装饰施工之前，通过施工图纸，把施工后的实际效果用真实和直观的视图表现出来，让大家能够一目了然地看到施工后的实际效果。
+
+                section.sidebar.float-left
+                    section.page-menu(skinobjectzone='menu_4018')
+                        .page-menu-title
+                            h3 服务范围
+                        .page-menu-content
+                            ul
+                                li
+                                    a(href='service') 视听展示
+                                li
+                                    a(href='service') 影视动画
+                                li.current
+                                    a(href='service') 建筑表现
+                    .clear
+                    #a1portalSkin_sidebarAreaA.QHDEmptyArea.sidebar-content
+        include lib/footer
+
+block script
+    script.
+        $(window).bind("load resize",
+            function () {
+                $("#carousel-185336").carouFredSel({
+                    width: '100%',
+                    items: {
+                        visible: 1
+                    },
+                    auto: {
+                        pauseOnHover: true,
+                        timeoutDuration: 5000
+                    },
+                    swipe: {
+                        onTouch: true,
+                        onMouse: true
+                    },
+                    pagination: "#carousel-page-185336",
+                    scroll: {
+                        fx: "crossfade"
+                    }
+                });
+            });
+
+        $(document).ready(function () {
+            $('.page-menu-content ul').find('li:last').addClass('last');
+            $('.page-menu-content > ul > li > a').click(function () {
+                if ($(this).parent('li').find('ul')) {
+                    $(this).parent('li').find('ul').slideDown('fast');
+                    $(this).parent('li').siblings('li').find('ul').slideUp('fast');
+                    $(this).parent('li').addClass('current').siblings('li').removeClass('current');
+                }
+            });
+        });

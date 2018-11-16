@@ -1,0 +1,113 @@
+extends layout
+
+block vars
+    - let title = '火星人科技'
+block content
+    #wrapper.home-page
+        include lib/head
+        #a1portalSkin_headerAreaA.header
+            a#33426(name='33426')
+            .module-default
+                .module-inner
+                    #a1portalSkin_ctr185352185352_mainArea.module-content
+                        .slideshow.slideshow-min.carousel.clearfix(style='height:400px; overflow:hidden;')
+                            #carousel-185352
+                                .carousel-item
+                                    .carousel-img
+                                        a(href='javascript:;')
+                                            img(src='/public/images/files/2016062911445497952.jpg' border='0')
+                            #carousel-page-185352.carousel-btn.carousel-btn-fixed
+        section.main
+            .page-width.clearfix
+                .full-page-content
+                    #a1portalSkin_mainArea.full-page-content-wrapper
+                        a#33404(name='33404')
+                        .module-default
+                            .module-inner
+                                #a1portalSkin_ctr185351185351_mainArea.module-content
+                                    .link-list
+                                        ul.column.marg-per2.clearfix
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2776.htm')
+                                                        img(src='/public/images/files/201606291157355052.png')
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='400')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2775.htm')
+                                                        img(src='/public/images/files/2016062911571563413.png')
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='600')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2774.htm')
+                                                        img(src='/public/images/files/2016062911565969391.png')
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='800')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2773.htm')
+                                                        img(src='/public/images/files/2016062911563872344.png')
+                                            li.col-5-1.last.not-animated(data-animate='fadeInUp', data-delay='1000')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2772.htm')
+                                                        img(src='/public/images/files/2016062911561798991.png')
+                                        ul.column.marg-per2.clearfix
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2771.htm')
+                                                        img(src='/public/images/files/2016062911552663440.png')
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='400')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2770.htm')
+                                                        img(src='/public/images/files/2016062911543826841.png')
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='600')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2769.htm')
+                                                        img(src='/public/images/files/2016062911542251447.png')
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='800')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2768.htm')
+                                                        img(src='/public/images/files/2016062911535847006.png')
+                                            li.col-5-1.last.not-animated(data-animate='fadeInUp', data-delay='1000')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2767.htm')
+                                                        img(src='/public/images/files/201606291153342821.png')
+                                        ul.column.marg-per2.clearfix
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2766.htm')
+                                                        img(src='/public/images/files/2016062911530797012.png')
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='400')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2765.htm')
+                                                        img(src='/public/images/files/2016062911524035499.png')
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='600')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2764.htm')
+                                                        img(src='/public/images/files/2016062911521849215.png')
+                                            li.col-5-1.not-animated(data-animate='fadeInUp', data-delay='800')
+                                                .link-img
+                                                    a(href='Show.asp-m=1&d=2763.htm')
+                                                        img(src='/public/images/files/2016062911515810078.png')
+
+        include lib/footer
+block script
+    script.
+        $(window).bind("load resize",
+            function () {
+                $("#carousel-185352").carouFredSel({
+                    width: '100%',
+                    items: {
+                        visible: 1
+                    },
+                    auto: {
+                        pauseOnHover: true,
+                        timeoutDuration: 5000
+                    },
+                    swipe: {
+                        onTouch: true,
+                        onMouse: true
+                    },
+                    pagination: "#carousel-page-185323",
+                    scroll: {
+                        fx: "crossfade"
+                    }
+                });
+            });
+

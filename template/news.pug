@@ -1,0 +1,134 @@
+extends layout
+
+block vars
+    - let title = '火星人科技'
+
+block content
+    #wrapper.home-page
+        include lib/head
+        section.main
+            section.full-page-title-wrap.clearfix(skinobjectzone='menu_3808')
+                h2 新闻中心
+            section.full-page-menu(skinobjectzone='menu_3902')
+                .full-page-menu-content
+                    .page-width
+                        ul.clearfix
+                            li.current
+                                a(href='news') 公司动态
+                            li
+                                a(href='news') 行业新闻
+            .page-width.clearfix
+                .full-page-content
+                    #a1portalSkin_mainArea.full-page-content-wrapper
+                        a#33406(name='33406')
+                        .module-default
+                            .module-inner
+                                #a1portalSkin_ctr185353185353_mainArea.module-content
+                                    .portfolio-list.portfolio-list-summary.article-list
+                                        ul.column.marg-per2.clearfix
+                                            li.col-4-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .portfolio-item
+                                                    .portfolio-img
+                                                        a(href='news_show')
+                                                            img(src='/public/images/files/timg.jpg' width='235', height='180')
+                                                    .portfolio-title
+                                                        h2
+                                                            a(href='news_show') 好味佳系列参展南京糖酒会圆满落
+                                                    .portfolio-summary
+                                                        .qhd-content
+                                                            | 2015年10月24日，好味佳公司携手重磅新品参展，展会上播放了由文化传媒精心定做的系列视频，完美展示产品卖点，以搞笑作为噱头的TVC，并用趣味搞笑的画面语言引起话题性，将好味佳的形象刻印在受众脑海。现场游戏互动、分享
+                                                    em
+                                            li.col-4-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .portfolio-item
+                                                    .portfolio-img
+                                                        a(href='news_show')
+                                                            img(src='/public/images/files/timg.jpg' width='235', height='180')
+                                                    .portfolio-title
+                                                        h2
+                                                            a(href='news_show') Autodesk 3ds max 2016 发布会
+                                                    .portfolio-summary
+                                                        .qhd-content
+                                                            | 7月16日，带领部分同事参与Autodesk3dsmax2016发布会，了解全新功能，“精益求精，专注更需要专业！”是我们槟果文化传媒的核心价值。尽我们所能，用最先进的技术实现文化的传播与不同文化的交流，满足您的需求。社会发展
+                                                    em
+                                            li.col-4-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .portfolio-item
+                                                    .portfolio-img
+                                                        a(href='news_show')
+                                                            img(src='/public/images/files/timg.jpg' width='235', height='180')
+                                                    .portfolio-title
+                                                        h2
+                                                            a(href='news_show') 喜迁新址，欢迎莅临
+                                                    .portfolio-summary
+                                                        .qhd-content
+                                                            | 艾维在快速且稳健发展过程中不断扩大规模，原办公地点已不能满足公司发展需要。公司自2015年4月26日乔迁并入住广州市福田区泰然金谷6号深业泰然大厦B座503。新址环境优美，地理位置优越，有利于公司形象提升和员工的办
+                                                    em
+                                            li.col-4-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .portfolio-item
+                                                    .portfolio-img
+                                                        a(href='news_show')
+                                                            img(src='/public/images/files/timg.jpg' width='235', height='180')
+                                                    .portfolio-title
+                                                        h2
+                                                            a(href='news_show') 点亮小小心愿，共圆儿童梦想
+                                                    .portfolio-summary
+                                                        .qhd-content
+                                                            | 2015年1月18日，文化传媒积极参与汕头团市委、市青年志愿者协会与市蓝天义工协会联合在鮀岛剧院开展“点亮小小心愿，共圆儿童梦想”活动，并出资购买儿童音乐剧《胡桃夹子》的门票捐赠给汕头市蓝天义工协会，让多名贫困
+                                                    em
+                                            li.col-4-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .portfolio-item
+                                                    .portfolio-img
+                                                        a(href='news_show')
+                                                            img(src='/public/images/files/timg.jpg' width='235', height='180')
+                                                    .portfolio-title
+                                                        h2
+                                                            a(href='news_show') 艾维带着小伙伴春游啦！
+                                                    .portfolio-summary
+                                                        .qhd-content
+                                                            | 为了感谢各位小伙伴们对公司发展作出的不懈努力与无私奉献；同时也为了促进员工交流互动，加强团队凝聚力，秉着弘扬公司企业文化理念，丰富员工业余文化生活，开阔视野的目标，于2015年2月3日组织开展了集体旅游出行活动。
+                                                    em
+                                        .clear
+                                        .fengye(align='right')
+                                            | 共
+                                            span#totalrecord 5
+                                            | 篇 页次:
+                                            span#currpage(style='color:red') 1
+                                            | /
+                                            span#totalpage 1
+                                            | 页 
+                                            span#perpagenum 12
+                                            | 篇/页
+                                            a(href='javascript:;') 首页
+                                            a(href='javascript:;') 上一页
+                                            a(href='javascript:;') 下一页
+                                            a(href='javascript:;') 尾页
+                                            | 转到：
+                                            select#turnpage(name='page', onchange='javascript:window.location=this.options[this.selectedIndex].value;')
+                                                option(value='?id=1668&page=1', selected='') 第1页
+
+        include lib/footer
+
+
+block script
+    script.
+        $(window).bind("load resize",
+            function() {
+                $("#carousel-185354").carouFredSel({
+                width: '100%',
+                items: {
+                    visible: 1
+                },
+                auto: {
+                    pauseOnHover: true,
+                    timeoutDuration: 5000
+                },
+                swipe: {
+                    onTouch: true,
+                    onMouse: true
+                },
+                pagination: "#carousel-page-185354",
+                scroll: {
+                    fx: "crossfade"
+                }
+                });
+            });
+

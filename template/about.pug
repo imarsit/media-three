@@ -1,0 +1,78 @@
+extends layout
+
+block vars
+    - let title = '火星人科技'
+block content
+    #wrapper.home-page
+        include lib/head
+        #a1portalSkin_headerAreaA.header
+            a#33429(name='33429')
+            .module-default
+                .module-inner
+                    #a1portalSkin_ctr185323185323_mainArea.module-content
+                        .slideshow.slideshow-min.carousel.clearfix(style='height:400px; overflow:hidden;')
+                            #carousel-185323
+                                .carousel-item
+                                    .carousel-img
+                                        a(href='javascript:;', target='')
+                                            img(src='/public/images/files/201606281750309980.jpg')
+                            #carousel-page-185323.carousel-btn.carousel-btn-fixed
+
+        section.main
+            section.full-page-title-wrap.clearfix(skinobjectzone='menu_3808')
+                h2 关于我们
+            section.full-page-menu(skinobjectzone='menu_3902')
+                .full-page-menu-content
+                    .page-width
+                        ul.clearfix
+                            li.current
+                                a(href='about') 公司介绍
+                            li
+                                a(href='about') 企业荣誉
+                            li
+                                a(href='about') 企业文化
+                            li
+                                a(href='about') 公司环境
+                            li
+                                a(href='about') 精英团队
+                        .page-width.clearfix
+                            .full-page-content
+                                #a1portalSkin_mainArea.full-page-content-wrapper
+                                    a#33378(name='33378')
+                                    .module-default
+                                        .module-inner
+                                            #a1portalSkin_ctr185322185322_mainArea.module-content
+                                                .qhd-content
+                                                    #MyContent
+                                                        p 某某某文化传媒有限公司是以创意文化为基点，集宣传片制作，广告制作，展览活动，演出策划于一体的专业文化发展公司。公司成立以来为众多的企业客户提供专业策划服务。
+                                                        p
+                                                            | 公司拥有资深的工作团队，我们以专业的设计，精湛的制作，贴心的服务为基础，以创造企业品牌效益最大化为最终目标。懂客户，更懂市场，懂服务，更懂需求!做为一个文化传媒公司，我们在影视制作方面已经取得骄人的成绩，我们拥有强大的策划团队，优秀的拍摄团队，庞大的后期制作团队以及丰富的演员资源，必将为各行各业的公司企业创造更大的宣传价值。此外，我们也拥有自己的合作媒体，可以帮助客户更好的造势和更好的推广自己的品牌。无论是线下的LED媒体投放还是线上各类微信热门大号，高粉丝量朋友圈，知名网站等新新媒体资源，让您的产品和信息深入人心，去覆盖精准的终端市场，从而获得最好的受众效果。公司提供专业的展览设计与施工。公司专业级别的设计和策划团队，技艺精湛的施工团队已经为珠三角的许多展览客户提供过优质的服务，定能为更多企业客户带来更大的效益。
+                                                        p
+                                                            | 公司以领先的思维高度，核心的资源整合能力，专业的操作技能为基础，以创造企业价值最大化为已任，致力打造行业平台，为客户提供产业性高效解决方案赢得客户、行业一致好评。
+                                                        p 我们的宗旨：专业，专注，打造完美的品质。
+                                                        p
+                                                            br
+        include lib/footer
+block script
+    script.
+        $(window).bind("load resize",
+            function () {
+                $("#carousel-185323").carouFredSel({
+                    width: '100%',
+                    items: {
+                        visible: 1
+                    },
+                    auto: {
+                        pauseOnHover: true,
+                        timeoutDuration: 5000
+                    },
+                    swipe: {
+                        onTouch: true,
+                        onMouse: true
+                    },
+                    pagination: "#carousel-page-185323",
+                    scroll: {
+                        fx: "crossfade"
+                    }
+                });
+            });

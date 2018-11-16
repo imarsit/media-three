@@ -1,0 +1,185 @@
+header.top.header-v1.desktops-section.default-top
+    .top-main
+        .page-width.clearfix
+            .logo.float-left(skinobjectzone='HtmlLogo_395')
+                a(href='/')
+                    img(src='/public/images/files/logo.png' border='0', align='absmiddle', alt='logo')
+            .language(skinobjectzone='HtmlLanguage_450')
+            .top-main-content.float-right
+                nav.nav
+                    .main-nav.clearfix(skinobjectzone='menu_661')
+                        ul.sf-menu
+                            li
+                                a.first-level(href='/', target='')
+                                    strong 首页
+                                i
+                            li
+                                a.first-level(href='about')
+                                    strong 关于我们
+                                i
+                                ul
+                                    li
+                                        a(href='about')
+                                            strong 公司介绍
+                                    li
+                                        a(href='about')
+                                            strong 企业荣誉
+                                    li
+                                        a(href='about')
+                                            strong 企业文化
+                                    li
+                                        a(href='about')
+                                            strong 公司环境
+                                    li
+                                        a(href='about')
+                                            strong 精英团队
+                            li
+                                a.first-level(href='service')
+                                    strong 服务范围
+                                i
+                                ul
+                                    li
+                                        a(href='service')
+                                            strong 视听展示
+                                    li
+                                        a(href='service')
+                                            strong 影视动画
+                                    li
+                                        a(href='service' )
+                                            strong 建筑表现
+                            li
+                                a.first-level(href='cases' )
+                                    strong 成功案例
+                                i
+                            li
+                                a.first-level(href='customer' )
+                                    strong 服务客户
+                                i
+                            li
+                                a.first-level(href='news')
+                                    strong 新闻中心
+                                i
+                                ul
+                                    li
+                                        a(href='news')
+                                            strong 公司动态
+                                    li
+                                        a(href='news' )
+                                            strong 行业新闻
+                            li
+                                a.first-level(href='contact' )
+                                    strong 联系我们
+                                i
+                                ul
+                                    li
+                                        a(href='contact' )
+                                            strong 联系方式
+                .clear
+.touch-top.mobile-section.clearfix
+    .touch-top-wrapper.clearfix
+        .touch-logo(skinobjectzone='HtmlLogo_2683')
+            a(href='/')
+                img(src='/public/images/files/logo.png' border='0', align='absmiddle', alt='logo')
+
+        .touch-navigation
+            .touch-toggle
+                ul
+                    li.touch-toggle-item-last
+                        a.drawer-menu(href='javascript:;', data-drawer='drawer-section-menu')
+                            i.touch-icon-menu
+                            span 导航
+
+        .touch-toggle-content.touch-top-home
+            #openmenu.drawer-section.drawer-section-menu
+                .touch-menu(skinobjectzone='menu_3174')
+                    ul
+                        li
+                            a(href='/')
+                                span 首页
+                        li
+                            a(href='javascript:;')
+                                span 关于我们
+                                i.touch-arrow-down
+                            ul
+                                li
+                                    a(href='about')
+                                        span 公司介绍
+                                li
+                                    a(href='about')
+                                        span 企业荣誉
+                                li
+                                    a(href='about')
+                                        span 企业文化
+                                li
+                                    a(href='about')
+                                        span 公司环境
+                                li
+                                    a(href='about')
+                                        span 精英团队
+                        li
+                            a(href='javascript:;')
+                                span 服务范围
+                                i.touch-arrow-down
+                            ul
+                                li
+                                    a(href='service')
+                                        span 视听展示
+                                li
+                                    a(href='service')
+                                        span 影视动画
+                                li
+                                    a(href='service')
+                                        span 建筑表现
+                        li
+                            a(href='cases')
+                                span 成功案例
+                        li
+                            a(href='customer')
+                                span 服务客户
+                        li
+                            a(href='javascript:;')
+                                span 新闻中心
+                                i.touch-arrow-down
+                            ul
+                                li
+                                    a(href='news')
+                                        span 公司动态
+                                li
+                                    a(href='news')
+                                        span 行业新闻
+                        li
+                            a(href='contact')
+                                span 联系我们
+                                i.touch-arrow-down
+                            ul
+                                li
+                                    a(href='contact')
+                                        span 联系方式
+
+block script
+    script.
+        $('.touch-menu a').click(function() {
+            if ($(this).next().is('ul')) {
+            if ($(this).next('ul').css('display') == 'none') {
+                $(this).next('ul').slideDown();
+                $(this).find('i').attr("class", "touch-arrow-up");
+            } else {
+                $(this).next('ul').slideUp();
+                $(this).next('ul').find('ul').slideUp();
+                $(this).find('i').attr("class", "touch-arrow-down");
+            }
+            }
+        });
+
+        $(document).ready(function () {
+        $(".touch-toggle a").click(function (event) {
+            var className = $(this).attr("data-drawer");
+
+            if ($("." + className).css('display') == 'none') {
+                $("." + className).slideDown().siblings(".drawer-section").slideUp();
+            } else {
+                $(".drawer-section").slideUp();
+            }
+            event.stopPropagation();
+        });
+        });

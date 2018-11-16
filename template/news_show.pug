@@ -1,0 +1,103 @@
+extends layout
+
+block vars
+    - let title = '火星人科技'
+
+block content
+    #wrapper.home-page
+        include lib/head
+        #a1portalSkin_headerAreaA.header
+            a#33425(name='33425')
+            .module-default
+                .module-inner
+                    #a1portalSkin_ctr185354185354_mainArea.module-content
+
+                        .slideshow.slideshow-min.carousel.clearfix(style='height:400px; overflow:hidden;')
+                            #carousel-185354
+                                .carousel-item
+                                    .carousel-img
+                                        a(href='javascript:;', target='')
+                                            img(src='/public/images/files/2016062912210260231.jpg' border='0')
+                            #carousel-page-185354.carousel-btn.carousel-btn-fixed
+
+        section.main
+            .page-width.clearfix
+                .full-page-content
+                    #a1portalSkin_mainArea.full-page-content-wrapper
+                        a#33430(name='33430')
+                        .module-default
+                            .module-inner
+                                #a1portalSkin_ctr185360185360_mainArea.module-content
+                                    .article-detail
+                                        .article-title
+                                            h1 好味佳系列参展南京糖酒会圆满落幕
+                                        .entry-meta
+                                            span
+                                                strong 所属分类：
+                                                a(href='list.asp-id=1668.htm') 公司动态
+                                            span
+                                                strong 发布时间：
+                                                strong 2016年06月29日
+                                            .share-toolbar.clearfix
+                                                .bdsharebuttonbox
+                                                    span 分享到：
+                                                    a.bds_qzone(title='分享到QQ空间', href='#', data-cmd='qzone')
+                                                    a.bds_tsina(title='分享到新浪微博', href='#', data-cmd='tsina')
+                                                    a.bds_tqq(title='分享到腾讯微博', href='#', data-cmd='tqq')
+                                                    a.bds_weixin(title='分享到微信', href='#', data-cmd='weixin')
+                                                    a.bds_more(href='#', data-cmd='more')
+                                        .article-content-wrapper
+                                            .article-content
+                                                .qhd-content
+                                                    #MyContent
+                                                        p
+                                                            | 2015年10月24日，好味佳公司携手重磅新品参展，展会上播放了由文化传媒精心定做的系列视频，完美展示产品卖点，以搞笑作为噱头的TVC，并用趣味搞笑的画面语言引起话题性，将好味佳的形象刻印在受众脑海。现场游戏互动、分享送礼、洽谈合作，热闹非凡！
+                                                        p
+                                                            | 当年轻活力遇上美味酸甜零食会发生什么奇妙的变化呢？一上市，就引起热烈关注，来自全国各地的经销商纷纷抛来合作的“红绣球”。
+                                                        p(style='text-align: center;')
+                                                            a(href='javascript:;')
+                                                                img(src='/public/images/files/2016062909300994622.jpg' border='0')
+                                                        p
+                                                            br
+
+
+        include lib/footer
+
+
+block script
+    script.
+        $(window).bind("load resize",
+            function () {
+                $("#carousel-185354").carouFredSel({
+                    width: '100%',
+                    items: {
+                        visible: 1
+                    },
+                    auto: {
+                        pauseOnHover: true,
+                        timeoutDuration: 5000
+                    },
+                    swipe: {
+                        onTouch: true,
+                        onMouse: true
+                    },
+                    pagination: "#carousel-page-185354",
+                    scroll: {
+                        fx: "crossfade"
+                    }
+                });
+            });
+
+        window._bd_share_config = {
+            "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdMiniList": false,
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+            },
+            "share": {}
+            };
+            with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~ ( - new Date() / 36e5)];

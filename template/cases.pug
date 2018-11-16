@@ -1,0 +1,138 @@
+extends layout
+
+block vars
+    - let title = '火星人科技'
+
+block content
+    #wrapper.home-page
+        include lib/head
+        #a1portalSkin_headerAreaA.header
+            a#33427(name='33427')
+            .module-default
+                .module-inner
+                    #a1portalSkin_ctr185350185350_mainArea.module-content
+                        .slideshow.slideshow-min.carousel.clearfix(style='height:400px; overflow:hidden;')
+                            #carousel-185350
+                                .carousel-item
+                                    .carousel-img
+                                        a(href='javascript:;')
+                                            img(src='/public/images/files/2016062911301950089.jpg' border='0')
+                            #carousel-page-185350.carousel-btn.carousel-btn-fixed
+        section.main
+            .page-width.clearfix
+                .full-page-content
+                    #a1portalSkin_mainArea.full-page-content-wrapper
+                        a#33403(name='33403')
+                        .module-default
+                            .module-inner
+                                #a1portalSkin_ctr185349185349_mainArea.module-content
+                                    .portfolio-list.portfolio-list-summary.article-list
+                                        ul.column.marg-per2.clearfix
+                                            li.col-4-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .portfolio-item
+                                                    .portfolio-img
+                                                        a(href='cases_show')
+                                                            img(src='/public/images/files/timg.jpg' width='235', height='180')
+                                                    .portfolio-title
+                                                        h2
+                                                            a(href='cases_show') 阳光100城市广场
+                                                    .portfolio-summary
+                                                        .qhd-content
+                                                            p 项目名称：阳光100城市广场项目地点：山东潍坊客户名称：阳光100置业集团有限公司完成时间：2014年9月
+                                                    em
+                                            li.col-4-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .portfolio-item
+                                                    .portfolio-img
+                                                        a(href='cases_show')
+                                                            img(src='/public/images/files/timg.jpg' width='235', height='180')
+                                                    .portfolio-title
+                                                        h2
+                                                            a(href='cases_show') 国瑞·观海居
+                                                    .portfolio-summary
+                                                        .qhd-content
+                                                            p 项目名称：国瑞·观海居项目地点：广东汕头市客户名称：国瑞置业有限公司完成时间：2014年10月
+                                                    em
+                                            li.col-4-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .portfolio-item
+                                                    .portfolio-img
+                                                        a(href='cases_show')
+                                                            img(src='/public/images/files/timg.jpg' width='235', height='180')
+                                                    .portfolio-title
+                                                        h2
+                                                            a(href='cases_show') 中国南方电网电缆桥架模板优化方
+                                                    .portfolio-summary
+                                                        .qhd-content
+                                                            p 合金塑料电缆桥架是一种新型材料的桥架产品，具有结构合理、美观大方、配置灵活、载荷大、安装方便、产品规格
+                                                    em
+                                            li.col-4-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .portfolio-item
+                                                    .portfolio-img
+                                                        a(href='cases_show')
+                                                            img(src='/public/images/files/timg.jpg' width='235', height='180')
+                                                    .portfolio-title
+                                                        h2
+                                                            a(href='cases_show') 工业造型-四驱车表现
+                                                    .portfolio-summary
+                                                        .qhd-content
+                                                            p 随着时代的前进，科学技术的发展，人们审美观念的提高与变化，机械产品的造型设计和其它工业产品一样，不断地向
+                                                    em
+                                            li.col-4-1.not-animated(data-animate='fadeInUp', data-delay='200')
+                                                .portfolio-item
+                                                    .portfolio-img
+                                                        a(href='cases_show')
+                                                            img(src='/public/images/files/timg.jpg' width='235', height='180')
+                                                    .portfolio-title
+                                                        h2
+                                                            a(href='cases_show') 庭凯·尚悦名庭
+                                                    .portfolio-summary
+                                                        .qhd-content
+                                                            p 项目名称：庭凯·尚悦名庭项目地点：广东汕头客户名称：汕头市庭凯地产有限公司完成时间：2014年9月
+                                                    em
+                                        .clear
+                                        .fengye(align='right')
+                                            | 共
+                                            span#totalrecord 5
+                                            | 篇 页次:
+                                            span#currpage(style='color:red') 1
+                                            | /
+                                            span#totalpage 1
+                                            | 页 
+                                            span#perpagenum 12
+                                            | 篇/页
+                                            a(href='javascript:;') 首页
+                                            a(href='javascript:;') 上一页
+                                            a(href='javascript:;') 下一页
+                                            a(href='javascript:;') 尾页
+                                            | 转到：
+                                            select#turnpage(name='page', onchange='javascript:window.location=this.options[this.selectedIndex].value;')
+                                                option(value='?id=1664&page=1', selected='') 第1页
+
+
+        include lib/footer
+
+
+
+
+block script
+    script.
+        $(window).bind("load resize",
+            function () {
+                $("#carousel-185350").carouFredSel({
+                    width: '100%',
+                    items: {
+                        visible: 1
+                    },
+                    auto: {
+                        pauseOnHover: true,
+                        timeoutDuration: 5000
+                    },
+                    swipe: {
+                        onTouch: true,
+                        onMouse: true
+                    },
+                    pagination: "#carousel-page-185350",
+                    scroll: {
+                        fx: "crossfade"
+                    }
+                });
+            });
